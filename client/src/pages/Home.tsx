@@ -243,18 +243,18 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex flex-col md:flex-row gap-8 bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all h-72"
+                className="flex flex-col md:flex-row gap-8 bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all min-h-[18rem]"
               >
-                <div className="md:w-2/5 h-72 overflow-hidden flex-shrink-0">
+                <div className="md:w-2/5 h-64 md:h-auto overflow-hidden flex-shrink-0">
                   <img 
                     src={item.image} 
                     alt={item.title}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="md:w-3/5 p-8 flex flex-col justify-center">
-                  <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm line-clamp-5">{item.description}</p>
+                <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+                  <h3 className="text-xl md:text-2xl font-bold mb-3">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-sm line-clamp-6 md:line-clamp-none">{item.description}</p>
                 </div>
               </motion.div>
             ))}
