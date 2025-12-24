@@ -176,7 +176,6 @@ export default function Home() {
                     alt="Corporate Buildings" 
                     className="w-[120%] h-[120%] -ml-[10%] -mt-[10%] object-cover max-w-none"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
                 {/* Decorative elements */}
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-2xl -z-10 transform rotate-12"></div>
