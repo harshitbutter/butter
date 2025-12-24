@@ -223,49 +223,43 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader title="Why Butter Search?" />
           
-          <div className="space-y-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: <Award className="w-10 h-10 text-primary" />,
                 title: "Proven Expertise",
                 description: "Our team comprises IIM Calcutta graduates (2021 batch) with deep experience at top-tier firms including Alvarez & Marsal, PwC, and Deloitte. We combine consulting rigor with operational excellence, bringing a data-driven approach to executive search. Our founders have led transformational hiring initiatives at leading companies, understanding the nuances of high-impact talent acquisition.",
-                gradient: "from-blue-400 to-blue-600"
+                image: "/why-expertise.jpg"
               },
               {
-                icon: <Briefcase className="w-10 h-10 text-primary" />,
                 title: "Deep Understanding of Business Needs",
                 description: "We are former operators who have been in your shoes. Having managed teams and driven business outcomes, we understand the context behind every hire. We act as extensions of your team, not just recruiters. We bring insight into organizational fit, cultural alignment, and long-term success factors that transcend a CV. Every search is backed by strategic thinking about your company's trajectory.",
-                gradient: "from-purple-400 to-purple-600"
+                image: "/why-understanding.jpg"
               },
               {
-                icon: <Users className="w-10 h-10 text-primary" />,
                 title: "Extensive Network & Data Advantage",
                 description: "Access to a proprietary database of 50,000+ Tier-1 B-school graduates, alumni from top consulting firms (BCG, McKinsey, Bain), and a diverse network spanning tech, finance, and operations. Our network isn't just broad—it's deep. We maintain strong relationships with high-potential candidates and can unlock passive talent that never appears on job boards.",
-                gradient: "from-indigo-400 to-indigo-600"
+                image: "/why-network.jpg"
               }
             ].map((item, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center"
+                transition={{ delay: i * 0.1 }}
+                className="flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all"
               >
-                <div className={i % 2 === 1 ? "md:col-start-2 md:col-end-4 md:order-2" : ""}>
-                  <div className="flex gap-4">
-                    <div className="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center flex-shrink-0">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                      <p className="text-gray-600 leading-relaxed text-base">{item.description}</p>
-                    </div>
-                  </div>
+                <div className="h-64 overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className={i % 2 === 1 ? "md:order-1" : ""}>
-                  <div className={`bg-gradient-to-br ${item.gradient} rounded-2xl p-12 h-64 flex items-center justify-center`}>
-                    {item.icon}
+                <div className="p-6 h-64 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                    <p className="text-gray-600 leading-relaxed text-sm">{item.description}</p>
                   </div>
                 </div>
               </motion.div>
