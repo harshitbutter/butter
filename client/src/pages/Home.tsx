@@ -170,20 +170,17 @@ export default function Home() {
               className="hidden lg:block"
             >
               <div className="relative">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl p-8 h-48 flex items-end justify-end">
-                    <Building2 className="w-20 h-20 text-white opacity-30" />
-                  </div>
-                  <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl p-8 h-48 flex items-center justify-center">
-                    <Users className="w-20 h-20 text-white opacity-30" />
-                  </div>
-                  <div className="bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-2xl p-8 h-48 flex items-start justify-start">
-                    <Briefcase className="w-20 h-20 text-white opacity-30" />
-                  </div>
-                  <div className="bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-2xl p-8 h-48 flex items-center justify-end">
-                    <Award className="w-20 h-20 text-white opacity-30" />
-                  </div>
+                <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                  <img 
+                    src="/hero-main.png" 
+                    alt="Corporate Buildings" 
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
+                {/* Decorative elements */}
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-2xl -z-10 transform rotate-12"></div>
+                <div className="absolute -top-6 -left-6 w-24 h-24 border-4 border-primary/20 rounded-full -z-10"></div>
               </div>
             </motion.div>
           </div>
