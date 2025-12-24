@@ -170,11 +170,11 @@ export default function Home() {
               className="hidden lg:block"
             >
               <div className="relative">
-                <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-[500px]">
                   <img 
                     src="/hero-main.png" 
                     alt="Corporate Buildings" 
-                    className="w-full h-[500px] object-cover"
+                    className="w-[120%] h-[120%] -ml-[10%] -mt-[10%] object-cover max-w-none"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
