@@ -220,10 +220,10 @@ export default function Home() {
 
       {/* Why Us Section */}
       <section id="why" className="py-24 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader title="Why Butter Search?" />
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="space-y-8">
             {[
               {
                 title: "Proven Expertise",
@@ -247,20 +247,18 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all"
+                className="flex flex-col md:flex-row gap-8 bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all h-72"
               >
-                <div className="h-64 overflow-hidden">
+                <div className="md:w-2/5 h-72 overflow-hidden flex-shrink-0">
                   <img 
                     src={item.image} 
                     alt={item.title}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-6 h-64 flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                    <p className="text-gray-600 leading-relaxed text-sm">{item.description}</p>
-                  </div>
+                <div className="md:w-3/5 p-8 flex flex-col justify-center">
+                  <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-sm line-clamp-5">{item.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -335,14 +333,14 @@ export default function Home() {
                 role: "Co-Founder",
                 description: "IIM Calcutta '21 graduate with strategic expertise from Alvarez & Marsal and PwC. Harshit brings deep consulting rigor to talent acquisition.",
                 linkedIn: "https://www.linkedin.com/in/harshit-chandak-4751b3a1/",
-                gradient: "from-blue-400 to-blue-600"
+                image: "/founder-harshit.jpg"
               },
               {
                 name: "Ayush Singh",
                 role: "Co-Founder",
                 description: "IIM Calcutta '21 graduate with 4+ years of product experience at Naukri. Ayush understands the tech talent landscape inside out.",
                 linkedIn: "https://www.linkedin.com/in/ayush-singh-8b8922b0/",
-                gradient: "from-purple-400 to-purple-600"
+                image: "/founder-ayush.jpg"
               }
             ].map((founder, i) => (
               <motion.a
@@ -356,13 +354,19 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all cursor-pointer group"
               >
-                <div className={`bg-gradient-to-br ${founder.gradient} rounded-xl h-48 mb-6 flex items-center justify-center group-hover:scale-105 transition-transform`}>
-                  <Award className="w-16 h-16 text-white opacity-40" />
+                <div className="flex items-center gap-4 mb-6">
+                  <img 
+                    src={founder.image} 
+                    alt={founder.name}
+                    className="w-20 h-20 rounded-full object-cover border-2 border-primary group-hover:scale-110 transition-transform"
+                  />
+                  <div>
+                    <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{founder.name}</h3>
+                    <p className="text-primary font-semibold text-sm">{founder.role}</p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-1 group-hover:text-primary transition-colors">{founder.name}</h3>
-                <p className="text-primary font-semibold text-sm mb-4">{founder.role}</p>
-                <p className="text-gray-600 leading-relaxed mb-4">{founder.description}</p>
-                <div className="flex items-center gap-2 text-primary font-semibold">
+                <p className="text-gray-600 leading-relaxed mb-4 text-sm">{founder.description}</p>
+                <div className="flex items-center gap-2 text-primary font-semibold text-sm">
                   View on LinkedIn <ExternalLink className="w-4 h-4" />
                 </div>
               </motion.a>
