@@ -233,7 +233,7 @@ export default function Home() {
               },
               {
                 title: "Extensive Network & Data Advantage",
-                description: "Access to a proprietary database of 50,000+ Tier-1 B-school graduates, alumni from top consulting firms (BCG, McKinsey, Bain), and a diverse network spanning tech, finance, and operations. Our network isn't just broad—it's deep. We maintain strong relationships with high-potential candidates and can unlock passive talent that never appears on job boards.",
+                description: "Access to a proprietary database of 50,000+ Tier-1 B-school graduates, alumni from top consulting firms, and a diverse network spanning tech, finance, and operations. Our network isn't just broad—it's deep. We maintain strong relationships with high-potential candidates and can unlock passive talent that never appears on job boards.",
                 image: "/why-network.jpg"
               }
             ].map((item, i) => (
