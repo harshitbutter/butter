@@ -254,7 +254,7 @@ export default function Home() {
                 </div>
                 <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-center">
                   <h3 className="text-xl md:text-2xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm line-clamp-6 md:line-clamp-none">{item.description}</p>
+                  <p className="text-gray-600 leading-relaxed text-sm">{item.description}</p>
                 </div>
               </motion.div>
             ))}
