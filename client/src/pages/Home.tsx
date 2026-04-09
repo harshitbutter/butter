@@ -491,8 +491,7 @@ export default function Home() {
           </div>
           
           <div className="flex gap-6">
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">LinkedIn</a>
-            <a href="mailto:contact@buttersearch.com" className="text-gray-400 hover:text-primary transition-colors">Email</a>
+            
           </div>
         </div>
       </footer>
